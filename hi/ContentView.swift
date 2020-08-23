@@ -10,12 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack (alignment: .center, spacing: 10){
             Text("Ei, Dev!")
                 .font(.title)
-                .foregroundColor(.purple)
+                .padding()
             Text("Meu nome é Jadiê Oliveira, programador front end e iniciando no mundo swift.")
-        }.padding(20)
+                .foregroundColor(.gray)
+                .font(.body)
+                .multilineTextAlignment(.center)
+            Image("eu")
+            .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 250, height: 250)
+                .clipped()
+                .clipShape(Circle())
+                .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                .overlay(Circle().stroke(Color.purple, lineWidth: 2))
+        }
+        .padding(20)
+        
     }
 }
 
