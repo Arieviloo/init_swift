@@ -10,7 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Ei, Dev!")
+                .font(.title)
+                .foregroundColor(.purple)
+            Text("Meu nome é Jadiê Oliveira, programador front end e iniciando no mundo swift.")
+        }.padding(20)
     }
 }
 
